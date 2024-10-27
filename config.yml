@@ -1,0 +1,51 @@
+db: &db
+  url: root:root@(localhost:3306)/xxx?charset=utf8mb4&parseTime=true
+  driver: mysql
+  max_open_conns: 200
+  max_idle_conns: 50
+
+jwt: &jwt
+  jwt_key: your_jwt_key
+  jwt_expire: 360000 # 秒（100天）
+  jwt_issuer: your_issuer
+
+http: &http
+  Name: xxx-api
+  Host: 0.0.0.0
+  Port: 8888
+  Timeout: 10000
+  MaxBytes: 10485760  # 10M
+
+log: &log
+  Level: debug
+  Service: xxx
+  TimeFormat: 2006-01-02T15:04:05
+  enable_std_out: false
+  enable_file: false
+
+defaults: &defaults
+  <<: *http
+  Log:
+    <<: *log
+  db:
+    <<: *db
+  jwt:
+    <<: *jwt
+  zlog:
+    <<: *log
+
+dev:
+  <<: *defaults
+  Log:
+    <<: *log
+
+prod:
+  <<: *defaults
+  Log:
+    <<: *log
+    Level: info
+    Compress: true
+    KeepDays: 10
+    Path: logs
+    MaxSize: 10
+    Rotation: size

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mariadb:
+    container_name: backend-db
+    image: bitnami/mariadb:10.6
+    ports:
+      - "3306:3306"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - ./scripts/mariadb-init-scripts:/docker-entrypoint-startdb.d

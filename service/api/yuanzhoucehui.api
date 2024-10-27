@@ -1,0 +1,22 @@
+syntax = "v1"
+
+info (
+	title: "xxx API"
+	desc:  "xxx API"
+)
+
+type TimeResp {
+	Now string `json:"now"`
+}
+
+@server (
+	group: global
+)
+service yuanzhoucehui-api {
+	@doc (
+		summary: "获取系统时间"
+	)
+	@handler GetTime
+	get /api/global/datetime returns (TimeResp)
+}
+
