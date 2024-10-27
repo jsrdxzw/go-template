@@ -18,7 +18,7 @@ ensure: tidy
 ##################################
 .PHONY: fmt lint build clean api
 
-API_PATH = "./service/api/yuanzhoucehui.api"
+API_PATH = "./service/api/example.api"
 API_DIR = "./service/api"
 API_TEMPLATE = "./.goctl"
 SWAGGER_GEN_DIR = "./gen/swagger"

@@ -1,3 +1,3 @@
-CREATE DATABASE `xxx`;
-GRANT ALL PRIVILEGES ON `xxx`.* TO `root`;
+CREATE DATABASE `example`;
+GRANT ALL PRIVILEGES ON `example`.* TO `root`;
 SET PASSWORD FOR 'root'@localhost = PASSWORD("root");

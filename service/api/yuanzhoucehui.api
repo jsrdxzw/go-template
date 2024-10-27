@@ -1,8 +1,8 @@
 syntax = "v1"
 
 info (
-	title: "xxx API"
-	desc:  "xxx API"
+	title: "example API"
+	desc:  "example API"
 )
 
 type TimeResp {
@@ -12,7 +12,7 @@ type TimeResp {
 @server (
 	group: global
 )
-service yuanzhoucehui-api {
+service example-api {
 	@doc (
 		summary: "获取系统时间"
 	)

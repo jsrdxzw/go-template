@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-const Service = "yuanzhoucehui"
+const Service = "example"
 
 var (
 	rootCmd = &cobra.Command{Use: Service}

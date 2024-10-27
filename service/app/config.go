@@ -1,6 +1,7 @@
 package app
 
 import (
+	"example/be/service/extensions"
 	"flag"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
@@ -8,7 +9,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"yuanzhoucehui.com/be/service/extensions"
 )
 
 type Config struct {

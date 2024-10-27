@@ -1,12 +1,12 @@
 package api
 
 import (
+	"example/be/service/api/internal/handler"
+	"example/be/service/api/internal/middleware"
+	"example/be/service/api/internal/svc"
+	"example/be/service/app"
 	"fmt"
 	"github.com/zeromicro/go-zero/rest"
-	"yuanzhoucehui.com/be/service/api/internal/handler"
-	"yuanzhoucehui.com/be/service/api/internal/middleware"
-	"yuanzhoucehui.com/be/service/api/internal/svc"
-	"yuanzhoucehui.com/be/service/app"
 )
 
 func CreateServer(env string) (*rest.Server, *svc.ServiceContext) {

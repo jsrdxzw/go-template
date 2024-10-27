@@ -1,5 +1,5 @@
 db: &db
-  url: root:root@(localhost:3306)/xxx?charset=utf8mb4&parseTime=true
+  url: root:root@(localhost:3306)/example?charset=utf8mb4&parseTime=true
   driver: mysql
   max_open_conns: 200
   max_idle_conns: 50
@@ -10,7 +10,7 @@ jwt: &jwt
   jwt_issuer: your_issuer
 
 http: &http
-  Name: xxx-api
+  Name: example-api
   Host: 0.0.0.0
   Port: 8888
   Timeout: 10000
@@ -18,7 +18,7 @@ http: &http
 
 log: &log
   Level: debug
-  Service: xxx
+  Service: example
   TimeFormat: 2006-01-02T15:04:05
   enable_std_out: false
   enable_file: false

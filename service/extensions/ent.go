@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"entgo.io/ent/dialect"
 	entsql "entgo.io/ent/dialect/sql"
+	"example/be/gen/entschema"
 	"github.com/jmoiron/sqlx"
-	"yuanzhoucehui.com/be/gen/entschema"
 )
 
 type EntConf struct {
