@@ -8,7 +8,7 @@ type ServiceContext struct {
 	Config config.Config
 }
 
-func NewServiceContext(c config.Config) *ServiceContext {
+func NewServiceContext(c config.Config, env string) *ServiceContext {
 	return &ServiceContext{
 		Config: c,
 	}
