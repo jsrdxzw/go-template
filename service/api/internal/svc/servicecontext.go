@@ -1,14 +1,14 @@
 package svc
 
 import (
-	"example/be/service/api/internal/config"
+	"example/be/service/app"
 )
 
 type ServiceContext struct {
-	Config config.Config
+	Config app.Config
 }
 
-func NewServiceContext(c config.Config, env string) *ServiceContext {
+func NewServiceContext(c app.Config, env string) *ServiceContext {
 	return &ServiceContext{
 		Config: c,
 	}
